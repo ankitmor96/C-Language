@@ -288,5 +288,3 @@ Transpose matrix of an array:
 
 
  
-
-
