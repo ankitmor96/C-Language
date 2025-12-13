@@ -99,7 +99,7 @@ Output
 
 
 Program 4: Left Aligned Descending Pattern
-Input
+Input:
 
 #include<stdio.h>
 
@@ -133,7 +133,7 @@ Output
 
 
 Program 5: Number Pyramid Pattern
-Input
+Input:
 
 #include<stdio.h>
 
@@ -169,7 +169,7 @@ Output
 
 
 Program 6: Mirror Number Pattern
-Input
+Input:
 
 #include <stdio.h>
 
@@ -212,8 +212,27 @@ Output
 
 
 Program 7: Star Pattern Using Condition
-Input
+Input:
 
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    for(i=1;i<=3;i++){
+        for(j=1;j<=5;j++){
+            if(i==2 && j>1 && j<5)
+                printf("  ");
+            else
+                printf("* ");
+        }
+        printf("\n");
+    }
+
+    printf("*\n*\n");
+
+    return 0;
+}
 
 Rows = 3
 Columns = 5
