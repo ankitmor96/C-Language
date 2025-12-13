@@ -27,6 +27,8 @@ Output
 4142434445
 
 
+
+
 *Program 2: Continuous Number Pattern
 Input:
 
@@ -58,10 +60,30 @@ Output
 17 18 19 20
 
 
+
+
+
 *Program 3: Right Aligned Number Pattern
 Input:
 
+#include<stdio.h>
 
+int main(){
+
+   
+
+    for(int i=5;i>=1;i--){
+
+        for(int k=1;k<i;k++){
+            printf(" ");
+        }
+        for(int j=i;j<=5;j++){
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
 
 
 Rows = 5 (hardcoded)
@@ -72,6 +94,8 @@ Output
   123
  1234
 12345
+
+
 
 
 Program 4: Left Aligned Descending Pattern
