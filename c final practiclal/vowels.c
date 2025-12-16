@@ -19,10 +19,11 @@ int main() {
     char sentence[100];
 
     printf("Enter a sentence: ");
-    scanf(sentence, sizeof(sentence), stdin);
+    fgets(sentence, sizeof(sentence), stdin);
 
     countVowels(sentence);
 
     return 0;
 }
+
 
