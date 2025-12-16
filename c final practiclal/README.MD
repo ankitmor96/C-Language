@@ -1,71 +1,141 @@
-📘 C Programming Practice Programs
+1) Factorial of a Number (Using Loop)
+#include <stdio.h>
 
-This repository contains basic C programs that help in understanding loops, functions, conditionals, pointers, and pattern printing.
-Each program includes sample input and output for better understanding.
+int main() {
+    int num;
+    long long fact = 1;
 
-🔹 1. Factorial of a Number
-📌 Description
+    printf("Enter an integer: ");
+    scanf("%d", &num);
 
-This program calculates the factorial of a given integer using a for loop.
-It also checks for negative numbers.
-=>code:
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers");
+    } else {
+        for (int i = 1; i <= num; i++) {
+            fact = fact * i;
+        }
+        printf("Factorial of %d = %lld", num, fact);
+    }
+
+    return 0;
+}
+
+2) Count Occurrences of Each Vowel (Using Function)
+#include <stdio.h>
+
+void countVowels(char str[]) {
+    int a=0, e=0, i=0, o=0, u=0;
+
+    for (int j = 0; str[j] != '\0'; j++) {
+        if (str[j]=='a' || str[j]=='A') a++;
+        else if (str[j]=='e' || str[j]=='E') e++;
+        else if (str[j]=='i' || str[j]=='I') i++;
+        else if (str[j]=='o' || str[j]=='O') o++;
+        else if (str[j]=='u' || str[j]=='U') u++;
+    }
+
+    printf("A = %d\nE = %d\nI = %d\nO = %d\nU = %d\n", a,e,i,o,u);
+}
+
+int main() {
+    char sentence[100];
+
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    countVowels(sentence);
+
+    return 0;
+}
+
+3) Check Leap Year (Using Function)
+#include <stdio.h>
+
+int isLeapYear(int year) {
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        return 1;
+    else
+        return 0;
+}
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (isLeapYear(year))
+        printf("%d is a Leap Year", year);
+    else
+        printf("%d is Not a Leap Year", year);
+
+    return 0;
+}
+
+4) Swap Two Numbers Using Pointers
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x, y;
+
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &x, &y);
+
+    swap(&x, &y);
+
+    printf("After swapping:\n");
+    printf("x = %d, y = %d", x, y);
+
+    return 0;
+}
+
+5) Pattern Program (Nested for Loop)
+
+Note: _ is considered as whitespace
+
+Output Pattern
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+Program
+#include <stdio.h>
+
+int main() {
+    int i, j, space;
+
+    for (i = 1; i <= 5; i++) {
+
+        for (space = 1; space <= 5 - i; space++) {
+            printf("  ");
+        }
+
+        for (j = 1; j <= i; j++) {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
 
 
 
 
 
-If input is negative:
-
-factorial is not defined for negative number
-
-🔹 2. Count Vowels in a Sentence (Using Function)
-📌 Description
-
-This program reads a sentence from the user and counts the occurrences of vowels
-(A, E, I, O, U) using a user-defined function.
-=>code:
 
 
 
-
-
-
-🔹 3. Swap Two Numbers Using Pointers
-📌 Description
-
-This program swaps two numbers using call by reference with pointers.
-=>code:
-
-
-
-
-
-
-
-
-🔹 4. Leap Year Checker (Using Function)
-📌 Description
-
-This program checks whether a given year is a Leap Year using a function.
-=>code
-
-
-
-
-
-
-
-
-
-Example of non-leap year:
-
-2023 is Not a Leap Year
-
-🔹 5. Star Pyramid Pattern
-📌 Description
-
-This program prints a right-aligned star pyramid using nested for loops.
-=>code:
 
 
 
